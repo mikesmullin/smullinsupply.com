@@ -1,0 +1,395 @@
+/**
+ * @category   design_smullinsupply
+ * @package    Smullin Supply
+ * @copyright  Copyright (c) 2008 The Smullin Supply Company
+ * @license    All Rights Reserved.
+ */
+
+/* CSS Reset & Globals
+--------------------------------*/
+* { margin:0; padding:0; line-height:1.3em; }
+html, body { width:100%; height:100%; }
+body {
+  background:#fff;
+  font:normal 62.5%/1.3em Arial, Verdana, Helvetica, sans-serif;
+  color:#333;
+  }
+.clear, .row { display:block; clear:both; }
+.row .cell { width:980px; margin:0 auto;}
+.onecol .sidebar { display:none; }
+.twocol #col-1 { width:200px; }
+.twocol #col-2 { width:600px; }
+p { margin:1em 0; }
+h1, a { color:#1e679f; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* Pager Element
+------------------------------- */
+div.pager p.amount, div.pager div.limiter {
+  margin:0;
+  }
+div.pager div.pages, div.pager p.amount {
+  margin-top: 0.3em;
+  padding:0;
+  }
+
+/* Gradients & Shadows
+--------------------------------*/
+#wrapper-1 {
+  padding:0 0 50px 0;
+  }
+#wrapper-2 {
+  background:#dcdcdc url(../images/my_images/bg.jpg) no-repeat 50% 0;
+  }
+#wrapper-3 {
+  background:url(../images/my_images/footer-x.png) repeat-x 0 100%;
+  }
+
+
+/* Masthead
+--------------------------------*/
+#row-1 {
+  background:transparent url(../images/my_images/row-1-x.png) repeat-x 0 0;
+  height:20px;
+  padding:4px 0 0 0;
+  font-size:1.2em;
+  color:#465323;
+  }
+  /* Very Top Menu */
+  #row-1 ul {
+    margin:0;
+    }
+  #row-1 .right { float:right; }
+  #row-1 .left { float:left; }
+  #row-1 .left ul li { margin:0 14px 0 0; }
+  #row-1 .right ul li { margin:0 0 0 14px; }
+  #row-1 ul li {
+    float:left;
+    padding:0;
+    list-style:none;    
+    }
+  #row-1 a { color:#93af4a; }
+  #row-1 a:hover { color:#b9dc5d; text-decoration:none; }
+
+#row-2 {
+  height:277px;
+  }
+  #row-2 .cell {
+    position:relative;
+    background:url(../images/my_images/phone.png) no-repeat 100% 25px;
+    height:220px;
+    }
+
+  /* Logo */
+  #row-2 .logo a {
+    position:absolute; left:0; top:28px;
+    background:url(../images/my_images/logo.png);
+    display:block; width:345px; height:158px;
+    text-indent:-9999px; content:'';
+    }
+
+  /* Search Form */
+  #row-2 form {
+    position:absolute; left:584px; top:127px;
+    background:url(../images/my_images/search.png);
+    width:394px; height:46px;
+    margin:0; padding:0;
+    }
+  #row-2 form label {
+    display:none;
+    }
+  #row-2 form input {
+    position:absolute; left:10px; top:9px;
+    width:265px; height:17px;
+    border:none;
+    background:#fff;
+    font-size:15px;
+    margin:0; padding:6px;
+    color:#222;
+    }
+  #row-2 form button {
+    position:absolute; left:296px; top:9px; 
+    width:89px; height:30px;
+    border:none;
+    background:transparent;
+    text-indent:-9999px; content:'';
+    cursor:pointer;
+    }
+
+  /* Primary Menu */
+  #row-2 #nav-1 {
+    position:absolute; left:-20px; top:200px;
+    background:url(../images/my_images/top-nav.png) no-repeat 0 0;
+    width:1020px; height:87px;
+    padding:20px 20px 0 20px;
+    }
+
+  /* 0 Level */
+  #row-2 ul#nav {
+    margin:1px 0 0 16px; padding:0;
+    height:55px; width:950px;
+    border:none;
+    }
+  #row-2 ul#nav li.level0 {
+    list-style:none;
+    background:url(../images/my_images/nav-1-div.png) no-repeat 100% 0;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:-1px;
+    margin:0 4px 0 0; padding:2px 5px 0 0;
+    }
+  #row-2 ul#nav li a {
+    display:block;
+    margin:2px 0;
+    padding:11px 12px 0 12px;
+    height:38px;
+    color:#fff;
+    font-size: 20px;
+    font-weight: normal;
+    white-space:nowrap;
+    }
+  #row-2 ul#nav li a:hover {
+    background:#303a14;
+    text-decoration:none;
+    }
+    
+  /* 1st Level */
+  #row-2 ul#nav ul li {
+    margin:0; padding:0;
+    background:transparent;
+    }
+  #row-2 ul#nav ul li a,
+  #row-2 ul#nav ul li a:hover,
+  #row-2 ul#nav ul li.active a {
+    float:none;
+    margin:0; padding:0;
+    height:auto;
+    color:#000;
+    white-space:wrap;    
+    }
+  
+  /* 2nd Level */
+  #row-2 #nav ul { 
+    position:absolute; top:55px; left:-10000px; 
+    width:15em;
+    border:1px solid #1f260b; 
+    background:#58692a;
+    }
+  
+  /* Show Menu */
+  #row-2 #nav li.over > ul { left:0; }
+  #row-2 #nav li.over > ul li.over > ul { left:100px; }
+  #row-2 #nav li.over ul ul { left:-10000px; }
+  
+  #row-2 ul#nav ul li a {
+    background:#58692a;
+    color:#fff;
+    }
+  #row-2 ul#nav ul li a:hover { 
+    background:#303a14;
+    color:#fff; 
+    }
+  #row-2 ul#nav ul span,
+  #row-2 ul#nav ul li.last li span { padding:3px 15px 4px 15px; }
+
+
+/* Middle
+--------------------------------*/
+#middle {
+  background:url(../images/my_images/middle-y.png) repeat-y 50% 0;
+  font-size:1.1em;
+  color:#000;
+  }
+  #middle .cell {
+    background:#fff;
+    min-height:400px;
+    position:relative;
+    width:940px;
+    margin:10px auto 0 auto;
+    padding:10px 20px 20px 20px;
+    }
+  .cms-home #middle .cell { padding-top:267px; }
+
+  /* Front Page Large Rotating Ad Banner */
+  #middle #banner {
+    position:absolute; top:-6px; left:4px;
+    display:block; width:972px; height:267px;
+    margin:0; padding:0;
+    overflow:hidden;
+    }
+  #middle #front-banner a {
+    top:0; left:0;
+    }    
+
+.breadcrumbs { margin:0 0 .5em 0; }
+.breadcrumbs, .breadcrumbs a { color:#999; }
+
+
+/* Sidebar
+--------------------------------*/
+.block-best_sellers .item {
+  float:left;
+  width:49%; height:130px;
+  margin:2% 0 0 0; padding:0;
+  position:relative;
+  }
+  .block-best_sellers .r { float:right; }
+  .block-best_sellers .alt { background:#eee; }
+  .block-best_sellers p { margin:5px; padding:0; }
+  .block-best_sellers img {
+    margin:0 5px 0 0; padding:0;
+    float:left;
+    }
+  .block-best_sellers .category {
+    position:absolute; bottom:5px; left:125px;
+    }
+
+.block-testimonials .testimonial {
+  background:url(../images/my_images/testimonial.png) no-repeat 0 10px;
+  margin:0; padding:186px 0 0 0;
+  }
+  .block-testimonials .testimonial blockquote,
+  .block-testimonials .testimonial cite,
+  .block-testimonials a {
+    font:bold 1.1em/1.6em Georgia;
+    font-style:italic;
+    }
+  .block-testimonials .testimonial blockquote {
+    text-indent:27px;
+    margin:0 0 1em 10px;
+    color:#666;
+    }
+  .block-testimonials .testimonial cite,
+  .block-testimonials a {
+    display:block;
+    text-align:right;
+    }
+  .block-testimonials .testimonial cite {
+    font-size:1.35em;
+    line-height:0;
+    color:#888;
+    }
+  .block-testimonials .testimonial cite small {
+    font-size:.75em;
+    }
+
+
+/* Footer
+--------------------------------*/
+#footer {
+  clear:both;
+  margin:0 0 120px 0; padding:0;
+  background:url(../images/my_images/footer-y.png) repeat-y 50% 0;
+  }
+  #footer div.hr {
+    margin:8px 0 0 0;
+    }
+  #footer .cell {
+    position:relative;
+    background:#1f260b url(../images/my_images/1x1-1f260b.png);
+    font-size:1.1em;
+    color:#fff;
+    }
+  #footer .cell .padding {
+    margin:0 20px; padding:20px 0 0 0;
+    }
+  #footer #learning-center {
+    background:url(../images/my_images/learning-center.png) no-repeat;
+    display:block; width:164px; height:19px;
+    text-indent:-9999px; content:'';
+    }
+  #footer .hr {
+    clear:both;
+    width:100%; height:6px;
+    background:url(../images/my_images/dotted-8f9385-xy.png) repeat-x;
+    margin:8px 0;
+    }
+  #footer .fourcol .col {
+    float:left;
+    width:171px;
+    margin:0 25px 13px 0; padding:0;
+    }
+  #footer .fourcol .last {
+    margin:0;
+    }
+  #footer .col h2 {
+    font-weight:bold;
+    font-size:14px;
+    }
+  #footer .fourcol p {
+    height:5em;
+    line-height:1.7em;
+    overflow:hidden;
+    }
+  #footer .fourcol a.read_more {
+    display:block;
+    margin:0 0 0 auto;
+    background:#708538;
+    padding:6px 8px;
+    width:6em;
+    text-align:center;
+    color:#fff;
+    }
+  #footer .center {
+    text-align:center;
+    }
+  #footer ul,
+  #footer li {
+    margin:0; padding:0;
+    list-style:none;
+    display:inline;
+    }
+  #footer a {
+    color:#fff;
+    }
+  #footer #nav-3 p {
+    margin:0;
+    line-height:1.7em;
+    }
+  #footer #nav-3 {
+    position:absolute; left:-39px;
+    background:url(../images/my_images/footer-end-cap.png) no-repeat;
+    width:1039px; height:101px;
+    margin:0; padding:.5em 0 0 0;
+    }
+
+#bling {
+  clear:both; position:relative;
+  display:block; width:892px; height:337px;
+  background:url(../images/my_images/bling.png) no-repeat;
+  margin:0 auto;
+  text-indent:-9999px; content:'';
+  }
+  #bling a {
+    display:block; position:absolute;
+    margin:0; padding:0;
+    }
+  #b1 { left:185px; top:2px; width:97px; height:39px; }
+  #b2 { left:306px; top:12px; width:133px; height:28px; }
+  #b3 { left:462px; top:0; width:124px; height:41px; }
+  #b4 { left:611px; top:0; width:118px; height:41px; }
+  #b5 { left:59px; top:91px; width:98px; height:143px; }
+  #b6 { left:183px; top:98px; width:40px; height:26px; }
+  #b7 { left:228px; top:98px; width:40px; height:26px; }
+  #b8 { left:228px; top:135px; width:40px; height:26px; }
+  #b9 { left:182px; top:135px; width:40px; height:26px; }
+  #b10 { left:297px; top:96px; width:124px; height:78px; }
+  #b11 { left:452px; top:103px; width:143px; height:71px; }
+  #b12 { left:620px; top:92px; width:87px; height:83px; }
+  #b13 { left:728px; top:92px; width:125px; height:60px; }
+  #b14 { left:185px; top:237px; width:156px; height:25px; }
+  #b15 { left:368px; top:210px; width:67px; height:79px; }
+  #b16 { left:463px; top:238px; width:79px; height:23px; }
+
+
+/* Misc */
+/* Bullets in Product Attributes */
+.product-view .additional ul li {
+  list-style-type:disc;
+  margin:0 0 0 1.5em;
+  }
+/* Spacing on Headers under Product View */
+.product-view h3,
+.block dt {
+  margin:1em 0;
+  }
